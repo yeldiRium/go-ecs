@@ -24,7 +24,7 @@ build: clean
 	$(eval VERSION=$(shell git tag --points-at HEAD))
 	$(eval VERSION=$(or $(VERSION), (version unavailable)))
 
-	go build -ldflags="-X 'git.staubwolke.org/yeldir/go-ecs/version.Version=$(VERSION)'" -o ./build/go-ecs cli/main.go
+	go build -ldflags="-X 'git.staubwolke.org/yeldir/go-ecs/version.Version=$(VERSION)'" -o ./build/go-ecs
 
 .PHONY: qa \
 	analyze \
